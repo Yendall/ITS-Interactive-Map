@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "library(shinydashboard)\nlibrary(rCharts)\nlibrary(leaflet)\n\ndashboardPage(title=\"ITS Mapping Module\",\n              dashboardHeader(title=\"ITS Mapping Module\"),\n              # Sidebar with a slider input for number of bins\n              dashboardSidebar(),\n              dashboardBody(\n                # Show a plot of the generated distribution\n                mainPanel(\n                  leafletOutput(\"map\",width=\"150%\", height = 600)\n                )\n              )\n)",
+    "created" : 1501558367985.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2806450625",
+    "id" : "9F923299",
+    "lastKnownWriteTime" : 1501557589,
+    "last_content_update" : 1501557589,
+    "path" : "E:/GIT-Projects/ITS-Data-Science/InteractiveMap/ui.R",
+    "project_path" : "ui.R",
+    "properties" : {
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

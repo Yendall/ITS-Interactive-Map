@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "\nshinyServer(function(input, output){\n  \n  output$map <- renderLeaflet({\n    \n    union_polygons %>%\n    leaflet() %>%\n    addPolygons(stroke = FALSE, smoothFactor = 0.4, fillOpacity = 0.7, color = \"#b20000\", group = \"Infestation Radius\") %>%\n    addProviderTiles(\"OpenStreetMap.DE\", options = providerTileOptions(noWrap = TRUE), group = \"OpenStreetMap.DE\") %>%\n    setView(lng=144.96322, lat=-37.814, zoom=10) %>%\n    addPolygons(data=VIC_merged, popup = VIC_popover, weight=1,col = 'black',fillOpacity = 0.0,\n                highlightOptions = highlightOptions(color = \"red\", weight = 5,bringToFront = TRUE)) %>%\n    addPolygons(data=NSW_merged, popup = NSW_popover, weight=1,col = 'black',fillOpacity = 0.0,\n                highlightOptions = highlightOptions(color = \"red\", weight = 5,bringToFront = TRUE)) %>%\n    addPolygons(data=SA_merged, popup = SA_popover, weight=1,col = 'black',fillOpacity = 0.0,\n                highlightOptions = highlightOptions(color = \"red\", weight = 5,bringToFront = TRUE)) %>%\n    addPolygons(data=WA_merged, popup = WA_popover, weight=1,col = 'black',fillOpacity = 0.0,\n                highlightOptions = highlightOptions(color = \"red\", weight = 5,bringToFront = TRUE)) %>%\n    addPolygons(data=QLD_merged, popup = QLD_popover, weight=1,col = 'black',fillOpacity = 0.0,\n                highlightOptions = highlightOptions(color = \"red\", weight = 5,bringToFront = TRUE)) %>%\n    addPolygons(data=NT_merged, popup = NT_popover, weight=1,col = 'black',fillOpacity = 0.0,\n                highlightOptions = highlightOptions(color = \"red\", weight = 5,bringToFront = TRUE)) %>%\n    addMarkers(lng=termites_found$longitude, lat= termites_found$latitude, icon=house_icon, popup= termites_found$address, group=\"Housing Information\") %>%\n    addLayersControl(\n      baseGroups = c(\"OpenStreetMap.DE\"),\n      overlayGroups = c(\"Housing Information\", \"Infestation Radius\"),\n      options = layersControlOptions(collapsed = FALSE))\n  })\n})",
+    "created" : 1501558368230.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "159607213",
+    "id" : "BDF7139B",
+    "lastKnownWriteTime" : 1501558123,
+    "last_content_update" : 1501558123,
+    "path" : "E:/GIT-Projects/ITS-Data-Science/InteractiveMap/server.R",
+    "project_path" : "server.R",
+    "properties" : {
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
